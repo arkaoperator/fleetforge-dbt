@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: shipments
+    description: >
+      Shipment-level metadata from FleetForge. Includes value, dispatcher, and priority.
+    columns:
+      - name: shipment_id
+        description: Unique ID for each shipment
+      - name: shipment_status
+        description: 'F' = fulfilled, 'O' = open
+      - name: created_at
+        description: Date shipment was initiated
+
+  - name: shipment_events
+    description: >
+      Line-level events for each shipment. Includes shipping fee, delivery status, and depots involved.
+    columns:
+      - name: delivery_status
+        description: Status code for delivery: 'F' = Delivered, 'O' = In Transit
+      - name: shipping_fee
+        description: Final fee including fuel and surcharge
+
+  - name: delivery_customers
+    description: >
+      Customers receiving shipments through FleetForge.
+    columns:
+      - name: customer_id
+        description: FK to shipment.customer_id
+      - name: customer_segment
+        description: Retail, Wholesale, or Enterprise
