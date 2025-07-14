@@ -1,0 +1,5 @@
+name: 'fleetforge_demo'
+version: '1.0'
+profile: 'default'
+
+model-paths: ["models"]
