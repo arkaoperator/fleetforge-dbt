@@ -8,7 +8,7 @@ models:
       - name: shipment_id
         description: Unique ID for each shipment
       - name: shipment_status
-        description: 'F' = fulfilled, 'O' = open
+        description: 'F' = fulfilled, 'O' = open, 'P' = paused
       - name: created_at
         description: Date shipment was initiated
 
